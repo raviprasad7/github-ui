@@ -7,6 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('orgs');
+
+  this.route('org', {path: "org/:orgid"}, function() {
+    this.route('repos');
+    this.route('repo', {path: ":repoid"}, function() {
+      this.route('contributors');
+      this.route('issues');
+    });
+  });
 });
 
 export default Router;
