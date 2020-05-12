@@ -16,6 +16,8 @@ Router.map(function() {
       this.route('issues');
     });
   });
+
+  this.route('errorpage', {path: "*path"});
 });
 
 export default Router;
