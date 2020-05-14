@@ -1,9 +1,9 @@
 <h2>List of Orgs</h2>
 
 <ul>
-    <li>{{link-to "Facebook" "org.repos" "facebook"}}</li>
-    <li>{{link-to "Github" "org.repos" "github"}}</li>
-    <li>{{link-to "Google" "org.repos" "google"}}</li>
+    {{#each model as |org|}}
+        <li>{{link-to org.name "org.repos" org.id}}</li>
+    {{/each}}
 </ul>
 
 {{outlet}}
