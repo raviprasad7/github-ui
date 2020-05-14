@@ -2,7 +2,10 @@
 
 <ul>
     {{#each model as |org|}}
-        <li>{{link-to org.name "org.repos" org.id}}</li>
+        <li>
+            {{link-to org.name "org.repos" org.id}}
+            <span {{action 'addToFavorites' org.id}}>(Add to Favs)</span>    
+        </li>
     {{/each}}
 </ul>
 

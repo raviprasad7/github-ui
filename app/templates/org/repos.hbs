@@ -1,8 +1,7 @@
-<h4>List of Repos</h4>
-
 <ul>
-    <li>{{link-to "React" "org.repo" "react"}}</li>
-    <li>{{link-to "React-native" "org.repo" "react-native"}}</li>
+    {{#each model as |repo|}}
+        <li>{{link-to repo.name "org.repo" repo.id}}</li>
+    {{/each}}
 </ul>
 
 {{outlet}}
