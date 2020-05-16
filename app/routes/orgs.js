@@ -5,13 +5,17 @@ export default Route.extend({
     favorites: service(),
 
     model() {
-        return [
-            { id: "emberjs", name: "EmberJs"},
-            { id: "microsoft", name: "Microsoft"},
-            { id: "yahoo", name: "Yahoo"},
-            { id: "netflix", name: "Netflix"},
-            { id: "facebook", name: "Facebook"}
-        ]
+        return new Ember.RSVP.Promise((resolve, reject)=>{
+            Ember.run.later(()=>{
+                resolve([
+                    { id: "emberjs", name: "EmberJs"},
+                    { id: "microsoft", name: "Microsoft"},
+                    { id: "yahoo", name: "Yahoo"},
+                    { id: "netflix", name: "Netflix"},
+                    { id: "facebook", name: "Facebook"}
+                ]);
+            }, 3000);
+        });
     },
 
     actions: {

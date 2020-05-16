@@ -15,6 +15,7 @@ Router.map(function() {
       this.route('contributors');
       this.route('issues');
     });
+    this.route('notfound');
   });
 
   this.route('errorpage', {path: "*path"});
