@@ -3,6 +3,6 @@ import Service from '@ember/service';
 export default Service.extend({
     init() {
         this._super(...arguments);
-        this.set('accessToken', '161d19183433b171525d5ccb021cd43a1d50a2a1');
+        this.set('accessToken', '576c6e9cd6aa3ebe9ac20f2deaad9a19d06d0957');
     }
 });

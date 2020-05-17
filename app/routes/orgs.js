@@ -14,14 +14,17 @@ export default Route.extend({
                     { id: "netflix", name: "Netflix"},
                     { id: "facebook", name: "Facebook"}
                 ]);
-            }, 3000);
+            });
         });
     },
 
     actions: {
         addToFavorites: function(org) {
-            this.get('favorites.items').pushObject(org);
+            this.get('favorites.items').addObject(org);
             console.log(this.get('favorites.items').join(', '));
+        },
+        linksToggled() {
+            console.log('Toggled');
         }
     }
 });

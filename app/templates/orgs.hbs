@@ -1,12 +1,11 @@
 <h2>List of Orgs</h2>
 
 <ul>
-    {{#each model as |org|}}
-        <li>
-            {{link-to org.name "org.repos" org.id}}
-            <span {{action 'addToFavorites' org.id}}>(Add to Favs)</span>    
-        </li>
+    {{#each model as |o|}}
+        {{github-org org=o on-fav-clicked="addToFavorites"}}
     {{/each}}
 </ul>
+
+{{social-info name="Ravi" twitter="raviprasad0709" github="raviprasad7" on-links-toggled="linksToggled"}}
 
 {{outlet}}
